@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inverter</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function inversao(){
+			var palavra = document.getElementById("valor").value;
+     	 	document.getElementById("resultado").innerHTML = palavra.split('').reverse().join('');
+		}
+
+
+	</script>
+</head>
+<body>
+	<input id="valor">
+	<button type="submit" onclick="inversao()">Inverter</button>
+  <h1 id="resultado"></h1>
+
+</body>
+</html>

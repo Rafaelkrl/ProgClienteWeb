@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Dia 11/03</title>
+	<script> 
+		function mmc()
+		{
+			var a = document.getElementById("numero").value;
+			var b = document.getElementById("numero1").value; // para o usuario fornecer//
+			var i = 2;
+			var aux = 1;
+			while(a > 1 && b > 1)
+			{
+				if(a%i==0 || b%i==0){
+				a = a/i;
+				b = b/i;
+				aux = aux*i;
+				}
+				i++; 
+			}
+		var resposta = "O valor do mmc de " + " A e B " + " é " + aux;
+		document.getElementById("result").innerHTML = resposta;
+		return resposta;
+
+
+		}
+
+
+
+
+
+		
+		</script>
+	</head>
+
+<body>
+
+<h1 id="result"></h1>
+<input type="number" id="numero"/>
+<input type="number" id="numero1"/>
+<button onclick="javascript:mmc()"> Executar</button>
+
+
+
+</body>
+</html>  

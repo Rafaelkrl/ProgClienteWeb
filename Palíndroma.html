@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Java</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+    function palindromica(){
+      var palavra = document.getElementById("valor").value;
+      var qtd=0;
+      var tam = palavra.length-1;
+      for(var i = 0; i < tam; i++)
+        if(palavra.charAt(i) == palavra.charAt(tam-i))
+          qtd++;
+      if(i==qtd)
+        document.getElementById("resultado").innerHTML = "A palavra '"+palavra+"' <strong>É</strong> um palíndromo.";
+      else
+        document.getElementById("resultado").innerHTML = "A palavra '"+palavra+"' <strong>NÃO</strong> é um palíndromo.";
+    }  
+  </script>
+
+</head>
+<body>
+	<input id="valor">
+	<button onclick="javascript:palindromica()">Descobrir</button>
+  	<h1 id="resultado">É palíndromo?</h1>
+</body>
+</html>

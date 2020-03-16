@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tenis polar</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function cript(){
+			 var palavra = document.getElementById("valor").value;
+			 var tam = palavra.length;
+
+			 for(var i = 0; i < tam; i++){
+				var posicao = palavra.charAt(i);
+				switch(posicao){
+				 		case 'p': palavra = palavra.replace('p','t');break;
+				 		case 'o': palavra = palavra.replace('o','e');break;
+				 		case 'l': palavra = palavra.replace('l','n');break;
+				 		case 'a': palavra = palavra.replace('a','i');break;
+				 		case 'r': palavra = palavra.replace('r','s');break;
+				 		default: break;
+				 	}
+				 }
+
+				 	document.getElementById("resultado").innerHTML = "A palavra criptografada é: "+palavra+".";
+				 }
+
+				 function descript(){
+			 var palavra = document.getElementById("valor").value;
+			 var tam = palavra.length;
+
+			 for(var i = 0; i < tam; i++){
+				var posicao = palavra.charAt(i);
+				switch(posicao){
+				 		case 't': palavra = palavra.replace('t','p');break;
+				 		case 'e': palavra = palavra.replace('e','o');break;
+				 		case 'n': palavra = palavra.replace('n','l');break;
+				 		case 'i': palavra = palavra.replace('i','a');break;
+				 		case 's': palavra = palavra.replace('s','r');break;
+				 		default: break;
+				 	}
+				 }
+
+				 	document.getElementById("resultado").innerHTML = "A palavra descriptografada é: "+palavra+".";
+				 }
+	</script>
+</head>
+<body>
+	<input id="valor">
+	<button type="submit" onclick="cript()">Criptografar</button>
+	<button type="submit" onclick="descript()">Descriptografar</button>
+  <h1 id="resultado"></h1>
+</body>
+</html>

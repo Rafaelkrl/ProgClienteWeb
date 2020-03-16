@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Dia 11/03</title>
+	<script>
+	function nfatorial(){
+		var n = document.getElementById("numero").value;
+		var fat=n;
+		var i;
+		for(i=1;i<n; i++)
+		{
+			fat=fat*(n-i);
+
+		}
+
+		var resposta = "O valor do fatorial de " + n +" é " + fat;
+		document.getElementById("result").innerHTML = resposta;
+		return resposta;
+		}
+
+	
+			
+		
+		</script>
+	</head>
+
+<body>
+
+<h1 id="result"></h1>
+<input type="number" id="numero"/>
+<button onclick="javascript:nfatorial()"> Executar</button>
+
+</body>
+</html>
